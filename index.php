@@ -16,6 +16,22 @@ $scenic = new Car('brown', 5, 'fuel');
 $vtt = new Bicycle('red', 1);
 $board = new Skateboard('yellow', 0);
 
+var_dump($punto->switchOff()); // should return false
+var_dump($punto->switchOn());  // should return true
+
+$vtt->setCurrentSpeed(5);
+
+var_dump($vtt->switchOn());   // should return false
+
+$vtt->setCurrentSpeed(15);
+
+var_dump($vtt->switchOn());  // should return true
+var_dump($vtt->switchOff());  // should return false
+
+
+
+
+die();
 
 try {
     $punto->start();
@@ -28,8 +44,7 @@ try {
 
 
 
-var_dump($punto);
-die();
+
 
 $a89 = new MotorWay;
 $streetOfLentilly = new ResidentialWay;
